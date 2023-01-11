@@ -16,6 +16,7 @@
 		51C2CAB6296D7FC500E673C0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C2CAB5296D7FC500E673C0 /* MainTabBarController.swift */; };
 		51C3EF75296ED1E300C93F1F /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C3EF74296ED1E300C93F1F /* SearchController.swift */; };
 		51C3EF77296ED26C00C93F1F /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C3EF76296ED26C00C93F1F /* Podcast.swift */; };
+		51C3EF7B296EF12800C93F1F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C3EF7A296EF12800C93F1F /* APIService.swift */; };
 		B3BEC41028AFA78C115D440F /* Pods_Podify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3451AF2237841305F29B3DB /* Pods_Podify.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		51C2CAB5296D7FC500E673C0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		51C3EF74296ED1E300C93F1F /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		51C3EF76296ED26C00C93F1F /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		51C3EF7A296EF12800C93F1F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		7BFE1E7D9DBD8ADC4F645CA1 /* Pods-Podify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podify.release.xcconfig"; path = "Target Support Files/Pods-Podify/Pods-Podify.release.xcconfig"; sourceTree = "<group>"; };
 		AAA316AF66627B5A085F13CC /* Pods-Podify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Podify.debug.xcconfig"; path = "Target Support Files/Pods-Podify/Pods-Podify.debug.xcconfig"; sourceTree = "<group>"; };
 		E3451AF2237841305F29B3DB /* Pods_Podify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +56,6 @@
 				AAA316AF66627B5A085F13CC /* Pods-Podify.debug.xcconfig */,
 				7BFE1E7D9DBD8ADC4F645CA1 /* Pods-Podify.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,6 +80,7 @@
 		51C2CAA0296D7B1500E673C0 /* Podify */ = {
 			isa = PBXGroup;
 			children = (
+				51C3EF79296EF11900C93F1F /* API */,
 				51C3EF78296ED27700C93F1F /* Models */,
 				51C3EF73296ED1CE00C93F1F /* Controllers */,
 				51C2CAA1296D7B1500E673C0 /* AppDelegate.swift */,
@@ -107,6 +109,14 @@
 				51C3EF76296ED26C00C93F1F /* Podcast.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		51C3EF79296EF11900C93F1F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				51C3EF7A296EF12800C93F1F /* APIService.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		CC17F49BF3C67AD4D1C46D6B /* Frameworks */ = {
@@ -233,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51C2CAA6296D7B1500E673C0 /* ViewController.swift in Sources */,
+				51C3EF7B296EF12800C93F1F /* APIService.swift in Sources */,
 				51C3EF75296ED1E300C93F1F /* SearchController.swift in Sources */,
 				51C3EF77296ED26C00C93F1F /* Podcast.swift in Sources */,
 				51C2CAA2296D7B1500E673C0 /* AppDelegate.swift in Sources */,
