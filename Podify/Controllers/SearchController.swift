@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchController: UITableViewController, UISearchBarDelegate {
     
-    let podcasts = [
-        Podcast(name: "Interner", artistName: "Furkan Can"),
-        Podcast(name: "Interner", artistName: "Furkan Can")
+    var podcasts = [
+        Podcast(trackName: "Interner", artistName: "Furkan Can"),
+        Podcast(trackName: "Interner", artistName: "Furkan Can")
     ]
     
     let cellID = "cellID"
@@ -40,9 +41,12 @@ class SearchController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Searched: ", searchText)
         
-        //TODO: Implement Alamofire to search iTunes API
+        APIService.shared.fetchPodcasts(searchText) { results in
+            self.podcasts = results
+            self.tableView.reloadData()
+        }
+        
     }
     
     //MARK: - UITableView
@@ -55,11 +59,13 @@ class SearchController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         let podcast = self.podcasts[indexPath.row]
-        cell.textLabel?.text = podcast.name
-        cell.detailTextLabel?.text = podcast.artistName
+        cell.textLabel?.text = podcast.trackName ?? ""
+        cell.detailTextLabel?.text = podcast.artistName ?? ""
         cell.imageView?.image = UIImage(named: "AppIcon")
         
         
         return cell
     }
+    
+    
 }
